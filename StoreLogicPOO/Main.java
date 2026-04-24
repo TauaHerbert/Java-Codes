@@ -14,7 +14,7 @@ public class Main {
 		String continuar = "s";
 
 		while (continuar.equalsIgnoreCase("s")) {
-		    System.out.println("O que deseja cadastrar? (1) Produto Comum (2) Eletrônico");
+		    System.out.println("O que deseja cadastrar ? (1) Produto Comum (2) Eletrônico: ");
 		    int opcao = src.nextInt();
 		    src.nextLine();
 
@@ -43,7 +43,7 @@ public class Main {
 				elt.setNome(src.nextLine());
 				System.out.println("Informe o preço do Eletronico: ");
 				elt.setPreco(src.nextBigDecimal());
-				System.out.println("Inforem a Categoria do Eletronico: ");
+				System.out.println("Informe a Categoria do Eletronico: ");
 				elt.setIdCategoria(src.nextInt());
 				src.nextLine();
 				System.out.println("Informe a Marca do Eletronico: ");
