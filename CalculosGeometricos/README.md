@@ -13,3 +13,15 @@ Projeto desenvolvido em **Java** para consolidar fundamentos de Programação Or
 * **`AreaGeometrica`**: Interface base (Contrato).
 * **`Main`**: Gerenciamento da lógica de interação e instanciamento.
 * **`Quadrado`, `Retangulo` e `Circulo`**: Implementações que seguem a regra de negócio de cada forma.
+
+---
+
+## 🔄 Atualização (30/04/2026) — Refatoração para Paradigma Funcional
+
+O projeto passou por uma refatoração significativa para implementar **Expressões Lambda** e **Interfaces Funcionais**.
+
+* **Implementação de Lambdas:** A lógica de cálculo foi movida diretamente para a classe `Main`, sendo injetada dinamicamente através da interface `AreaGeometrica`.
+* **Minimalismo Técnico:** Com a aplicação deste conceito, as classes físicas (`Quadrado`, `Retangulo` e `Circulo`) tornaram-se **opcionais**, pois o comportamento de cada forma é definido "on-the-fly".
+* **Objetivo:** Reduzir a verbosidade do código e centralizar a resolução, tornando o projeto mais objetivo e alinhado com as práticas modernas do Java.
+
+---
