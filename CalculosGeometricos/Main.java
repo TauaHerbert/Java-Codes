@@ -1,5 +1,4 @@
 package CalculosGeometricos;
-
 import java.util.Scanner;
 
 public class Main {
@@ -22,14 +21,34 @@ public class Main {
 			op = src.nextInt();
 			
 			if (op == 1) {
-				areaGeometrica = calculandoQuadrado();
+				
+				System.out.println("Informe o tamanho dos lados do Quadrado: ");
+				var lado = src.nextDouble();
+				
+				areaGeometrica = () -> lado * lado;
+				
 				resp = "Área do Quadrado = "+areaGeometrica.getArea();
+			
 			}else if (op == 2) {
-				areaGeometrica = calculandoRetangulo();
+				
+				System.out.println("Informe a base do Retângulo: ");
+				var base = src.nextDouble();
+				System.out.println("Informe a altura do Retângulo: ");
+				var altura = src.nextDouble();
+				
+				areaGeometrica = () -> base * altura;
+				
 				resp = "Área do Retângulo = "+areaGeometrica.getArea();
+				
 			}else if (op == 3) {
-				areaGeometrica = calculandoCirculo();
+				
+				System.out.println("Informe o raio do Círculo: ");
+				var raio = src.nextDouble();
+				
+				areaGeometrica = () -> Math.PI * (raio * raio);
+				
 				resp = "Área do Círculo = "+areaGeometrica.getArea();
+				
 			}else if (op == 4){
 				System.out.println("Programa encerrado!");
 				break;
@@ -39,27 +58,5 @@ public class Main {
 			}
 			System.out.println("Resultado do cálculo: "+resp);
 		}
-		
 	}
-	
-	private static AreaGeometrica calculandoQuadrado() {
-		System.out.println("Informe o tamanho dos lados do Quadrado: ");
-		var vq = src.nextDouble();
-		return new Quadrado(vq);
-	}
-	
-	private static AreaGeometrica calculandoRetangulo() {
-		System.out.println("Informe a base do Retângulo: ");
-		var vrb = src.nextDouble();
-		System.out.println("Informe a altura do Retângulo: ");
-		var vra = src.nextDouble();
-		return new Retangulo(vra, vrb);
-	}
-	
-	private static AreaGeometrica calculandoCirculo() {
-		System.out.println("Informe o raio do Círculo: ");
-		var vc = src.nextDouble();
-		return new Circulo(vc);
-	}
-
 }

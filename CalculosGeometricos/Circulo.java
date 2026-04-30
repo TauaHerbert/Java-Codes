@@ -6,7 +6,6 @@ public record Circulo(double raio) implements AreaGeometrica{
 	
 	@Override
 	public double getArea() {
-		
-		return pi * (raio * raio);
+		return Math.PI * (raio * raio);
 	}
 }
